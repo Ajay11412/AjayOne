@@ -31,68 +31,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Navigation - floating white bar */
-
-.site-header {
-    position: sticky;
-    top: 15px;
-    z-index: 100;
-    margin: 15px 2% 0;
-}
-
-.navbar {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 28px;
-    background: var(--contact-card);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow);
-}
-
-.logo {
-    color: var(--contact-text);
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-}
-
-.logo span {
-    color: var(--contact-lavender);
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    list-style: none;
-}
-
-.nav-links a {
-    color: var(--contact-muted);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--contact-text);
-}
-
-.menu-btn {
-    display: none;
-    color: var(--contact-text);
-    background: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
 /* Hero */
 
 .contact-hero {
@@ -151,10 +89,12 @@ body {
 .contact-hero h1 span,
 .contact-heading h2 span,
 .message-info h2 span {
-    background: linear-gradient(90deg, #6f63ec, #b3a9f8);
+    background: linear-gradient(90deg, #6f63ec, #b3a9f8, #38bdf8, #6f63ec);
+    background-size: 300% auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    animation: shine 6s linear infinite;
 }
 
 .contact-hero p {
@@ -205,7 +145,9 @@ body {
     background: var(--contact-card);
     box-shadow: var(--shadow);
     text-decoration: none;
-    transition: 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease-out, box-shadow 0.35s;
 }
 
 .contact-card:hover {
@@ -401,24 +343,15 @@ body {
     line-height: 1.6;
 }
 
-/* Footer */
-
-.contact-footer {
-    margin: 20px 2% 15px;
-    padding: 22px;
-    border-radius: var(--radius-md);
-    background: var(--contact-card);
-    box-shadow: var(--shadow);
-    text-align: center;
-    color: var(--contact-muted);
-    font-size: 13px;
-}
-
 /* Responsive */
 
 @media (max-width: 950px) {
     .contact-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-card:last-child {
+        grid-column: 1 / -1;
     }
 
     .message-section {
@@ -428,33 +361,6 @@ body {
 }
 
 @media (max-width: 700px) {
-    .navbar {
-        padding: 14px 20px;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 25px;
-        border-radius: var(--radius-md);
-        background: var(--contact-card);
-        box-shadow: var(--shadow-hover);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
     .contact-hero {
         padding: 65px 6%;
     }
@@ -469,6 +375,10 @@ body {
 
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact-card:last-child {
+        grid-column: auto;
     }
 
     .contact-card {
@@ -496,7 +406,8 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
-/* contact-animations.css - load AFTER animations.css (contact page only) */
+
+/* =====  Animations & mouse effects (needs animations.css loaded first)  ===== */
 
 /* Hero spotlight + pulsing glow */
 .contact-hero::before {
@@ -510,30 +421,15 @@ body {
 @keyframes cglow { to { transform: translateX(-50%) scale(1.25); opacity: 0.6; } }
 
 /* Floating icons in hero */
+.contact-hero .chip { pointer-events: none; }
 .contact-hero .chip-a { top: 24%; left: 12%; color: #6f63ec; }
 .contact-hero .chip-b { top: 52%; right: 13%; color: #0f9aae; animation-delay: -2s; }
 .contact-hero .chip-c { bottom: 14%; left: 24%; color: #e8532b; animation-delay: -3.5s; }
-
-/* Animated gradient words */
-.contact-hero h1 span,
-.contact-heading h2 span,
-.message-info h2 span {
-    background: linear-gradient(90deg, #6f63ec, #b3a9f8, #38bdf8, #6f63ec);
-    background-size: 300% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: shine 6s linear infinite;
-}
 
 .section-tag i { animation: bob 3s ease-in-out infinite; }
 .message-note i { animation: pulse 2s infinite; border-radius: 50%; }
 
 /* Contact cards: tilt, spotlight, icon pop, arrow nudge */
-.contact-card {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.2s ease-out, box-shadow 0.35s;
-}
 .contact-card::before {
     content: "";
     position: absolute;

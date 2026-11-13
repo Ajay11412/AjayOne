@@ -38,72 +38,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Header - floating white bar */
-.header {
-    width: calc(100% - 4%);
-    margin: 15px auto 0;
-    padding: 14px 28px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--surface);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow);
-    position: sticky;
-    top: 15px;
-    z-index: 100;
-}
-
-.logo {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    color: var(--text);
-    text-decoration: none;
-}
-
-.logo span {
-    color: var(--lavender);
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: var(--muted);
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-    color: var(--text);
-}
-
-/* Black pill button */
-.talk-btn {
-    background: var(--dark);
-    color: #fff;
-    text-decoration: none;
-    padding: 11px 20px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 500;
-    box-shadow: var(--shadow-btn);
-    transition: 0.3s;
-}
-
-.talk-btn:hover {
-    background: #000;
-    transform: translateY(-2px);
-}
-
 /* Certificates Section */
 .certificates-section {
     padding: 85px 8%;
@@ -164,7 +98,7 @@ body {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
     overflow: hidden;
-    transition: 0.35s;
+    transition: transform 0.2s ease-out, box-shadow 0.35s;
 }
 
 .certificate-card:hover {
@@ -291,57 +225,14 @@ body {
     box-shadow: var(--shadow);
 }
 
-/* Footer - floating white bar */
-.footer {
-    margin: 0 2% 15px;
-    padding: 22px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: var(--radius-md);
-    background: var(--surface);
-    box-shadow: var(--shadow);
-    color: var(--muted);
-    font-size: 13px;
-}
-
-.footer a {
-    color: var(--lavender-deep);
-    text-decoration: none;
-    font-weight: 500;
-}
-
 /* Responsive Design */
 @media (max-width: 1100px) {
-    .navbar {
-        gap: 14px;
-    }
-
-    .navbar a {
-        font-size: 12px;
-    }
-
     .certificate-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        gap: 16px;
-        padding: 18px 20px;
-    }
-
-    .navbar {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .talk-btn {
-        display: none;
-    }
-
     .section-heading h1 {
         font-size: 36px;
     }
@@ -354,10 +245,176 @@ body {
         padding: 55px 4%;
     }
 
-    .footer {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-        padding: 22px 6%;
-    }
+}
+
+/* =====  Animations & mouse effects (keyframes and tokens come from style.css)  ===== */
+
+/* Mouse spotlight over the section */
+.certificates-section { position: relative; }
+.certificates-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(480px circle at var(--mx, 50%) var(--my, 20%), rgba(143, 132, 240, 0.22), transparent 60%);
+    pointer-events: none;
+}
+.certificates-section > * { position: relative; z-index: 1; }
+
+/* Heading */
+.subtitle { animation: bob 4s ease-in-out infinite; }
+.section-heading h1 span {
+    background: linear-gradient(90deg, #6f63ec, #b3a9f8, #38bdf8, #6f63ec);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 6s linear infinite;
+}
+
+/* Cards: spotlight under the cursor, shine sweep, icon pulse */
+.certificate-card { position: relative; }
+.certificate-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(280px circle at var(--cx, 50%) var(--cy, 0), rgba(143, 132, 240, 0.16), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 2;
+}
+.certificate-card:hover::before { opacity: 1; }
+
+.certificate-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.8s ease;
+    pointer-events: none;
+}
+.certificate-card:hover .certificate-image::after { left: 130%; }
+
+.certificate-icon { animation: pulse 2.5s infinite; transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.certificate-card:hover .certificate-icon { transform: rotate(-12deg) scale(1.15); }
+
+.certificate-meta span { transition: transform 0.25s; }
+.certificate-meta span:hover { transform: translateX(5px); }
+.category { transition: 0.25s; }
+.certificate-card:hover .category { background: var(--dark, #1a1a1a); color: #fff; }
+
+.view-btn i { display: inline-block; transition: transform 0.3s; }
+.view-btn:hover i { transform: translate(3px, -3px); }
+
+/* =====  Interactive features: icons, stats, filter, lightbox  ===== */
+
+/* Floating icons beside the heading */
+.certificates-section > .chip { position: absolute; z-index: 3; pointer-events: none; }
+.certificates-section .chip-a { top: 70px; left: 11%; color: #d9a400; }
+.certificates-section .chip-b { top: 130px; right: 11%; color: #6f63ec; animation-delay: -2s; }
+.certificates-section .chip-c { top: 270px; left: 19%; color: #0f9aae; animation-delay: -3.5s; }
+
+/* Stats */
+.certificates-section .cert-stats {
+    justify-content: center;
+    margin: -20px 0 36px;
+    padding-top: 0;
+    border-top: 0;
+    text-align: center;
+}
+
+/* Filter buttons */
+.cert-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 36px; }
+.cert-filters button {
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: 0.25s;
+}
+.cert-filters button:hover { transform: translateY(-3px); }
+.cert-filters button.active { background: var(--dark); color: #fff; }
+.certificate-card.is-hidden { display: none; }
+.cert-pop { animation: certPop 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
+@keyframes certPop { from { opacity: 0; transform: scale(0.92) translateY(20px); } }
+
+/* Image: zoom hint + follows the mouse */
+.certificate-image { cursor: zoom-in; }
+.certificate-image::before {
+    content: "Click to enlarge";
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translate(-50%, 10px);
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(26, 26, 26, 0.85);
+    color: #fff;
+    font-size: 11px;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 3;
+    pointer-events: none;
+}
+.certificate-card:hover .certificate-image::before { opacity: 1; transform: translate(-50%, 0); }
+.certificate-image img { transition: transform 0.15s ease-out; }
+.certificate-card:hover .certificate-image img {
+    transform: translate(calc(var(--px, 0) * 14px), calc(var(--py, 0) * 14px)) scale(1.08);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px;
+    background: rgba(17, 17, 17, 0.72);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.lightbox.open { opacity: 1; visibility: visible; }
+.lightbox figure { margin: 0; text-align: center; transform: scale(0.94); transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.lightbox.open figure { transform: scale(1); }
+.lightbox img { max-width: min(86vw, 1000px); max-height: 76vh; border-radius: 20px; background: #fff; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4); }
+.lightbox figcaption { margin-top: 16px; color: #fff; font-size: 15px; font-weight: 500; }
+.lb-close, .lb-nav {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    color: #111;
+    font-size: 18px;
+    box-shadow: var(--shadow-hover);
+    cursor: pointer;
+    transition: 0.25s;
+}
+.lb-close { position: absolute; top: 22px; right: 22px; font-size: 26px; }
+.lb-close:hover, .lb-nav:hover { transform: scale(1.1); }
+
+@media (max-width: 900px) {
+    .certificates-section > .chip { display: none; }
+}
+@media (max-width: 700px) {
+    .lb-nav { position: absolute; bottom: 24px; }
+    .lb-prev { left: 24px; }
+    .lb-next { right: 24px; }
 }

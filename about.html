@@ -1,266 +1,428 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Meet Ajay Suresh — MCA student, aspiring software developer and technology enthusiast. Explore my journey, skills and interests.">
+    <link rel="icon" href="./Assets/images/logo.png?v=2" type="image/png">
+    <meta name="description"
+        content="Meet Ajay Suresh — MCA student, aspiring software developer and technology enthusiast. Explore my journey, skills and interests.">
+
     <title>About Me | AjayOne</title>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="Assets/css/style.css">
     <link rel="stylesheet" href="Assets/css/about.css">
     <link rel="stylesheet" href="Assets/css/animations.css">
     <link rel="stylesheet" href="Assets/css/about-animations.css">
+    <link rel="stylesheet" href="Assets/css/footer.css">
+
 </head>
 
 <body>
 
-<!-- Effects -->
-<div class="progress"></div>
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
-<div class="blob blob-a" data-depth="60"></div>
-<div class="blob blob-b" data-depth="40"></div>
+    <!-- ==============================
+         BACKGROUND EFFECTS
+    =============================== -->
 
-<!-- NAVIGATION -->
-<header class="header">
-    <a href="index.html" class="logo">Ajay<span>One.</span></a>
+    <div class="progress"></div>
 
-    <nav class="navbar" id="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="educations.html">Education</a>
-        <a href="certifications.html">Certifications</a>
-    </nav>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
 
-    <a href="contact.html" class="nav-btn" data-magnetic>
-        Let's Talk <i class="fa-solid fa-arrow-up-right-from-square"></i>
-    </a>
+    <div class="blob blob-a" data-depth="60"></div>
+    <div class="blob blob-b" data-depth="40"></div>
 
-    <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
-        <i class="fa-solid fa-bars"></i>
-    </button>
-</header>
 
-<main>
+    <!-- ==============================
+         COMMON HEADER
+    =============================== -->
 
-    <!-- ABOUT HERO -->
-    <section class="about-hero">
-        <div class="about-container">
+    <div id="header-placeholder"></div>
 
-            <!-- LEFT CONTENT -->
-            <div class="about-content">
+
+    <!-- ==============================
+         MAIN CONTENT
+    =============================== -->
+
+    <main>
+
+        <!-- ABOUT HERO -->
+
+        <section class="about-hero">
+
+            <div class="about-container">
+
+                <!-- LEFT CONTENT -->
+
+                <div class="about-content">
+
+                    <div class="eyebrow" data-reveal>
+                        <span class="eyebrow-dot"></span>
+                        A LITTLE ABOUT ME
+                    </div>
+
+                    <h1 data-reveal style="--d:.1s">
+                        Turning Ideas Into
+                        <span>Digital Reality.</span>
+                    </h1>
+
+                    <h2 data-reveal style="--d:.2s">
+                        Hey, I'm <span>Ajay Suresh.</span>
+                    </h2>
+
+                    <p class="about-intro" data-reveal style="--d:.3s">
+                        An MCA student, technology enthusiast and aspiring
+                        software developer who loves building things that
+                        make a difference.
+                    </p>
+
+                    <p class="about-description" data-reveal style="--d:.4s">
+                        My journey into technology is driven by curiosity
+                        and a passion for solving problems. I enjoy exploring
+                        how software works, developing web applications and
+                        creating clean, user-friendly digital experiences.
+                    </p>
+
+                    <p class="about-description" data-reveal style="--d:.45s">
+                        From frontend design to backend development, I love
+                        experimenting with different technologies and turning
+                        ideas into working projects. Every project is another
+                        opportunity to learn something new and improve my skills.
+                    </p>
+
+                    <p class="about-description" data-reveal style="--d:.5s">
+                        I'm always exploring new possibilities, strengthening
+                        my technical knowledge and working towards becoming
+                        a better developer.
+                    </p>
+
+
+                    <!-- ACTION BUTTONS -->
+
+                    <div class="about-actions" data-reveal style="--d:.6s">
+
+                        <a href="Assets/documents/resume.pdf"
+                            class="about-btn primary-btn"
+                            data-magnetic
+                            download>
+
+                            Download Resume
+                            <i class="fa-solid fa-download"></i>
+
+                        </a>
+
+                        <a href="projects.html"
+                            class="about-btn secondary-btn"
+                            data-magnetic>
+
+                            Explore My Work
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- HIGHLIGHTS -->
+
+                    <div class="about-highlights" data-reveal style="--d:.7s">
+
+                        <div class="highlight">
+
+                            <span class="highlight-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </span>
+
+                            <div>
+                                <h3>Education</h3>
+                                <p>Master of Computer Applications</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="highlight">
+
+                            <span class="highlight-icon">
+                                <i class="fa-solid fa-code"></i>
+                            </span>
+
+                            <div>
+                                <h3>Interests</h3>
+                                <p>Web Development & Software</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT VISUAL -->
+
+                <div class="about-visual">
+
+                    <div class="visual-glow"></div>
+
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+                    <div class="orbit orbit-three"></div>
+
+
+                    <!-- DEVELOPER CARD -->
+
+                    <div class="developer-card">
+
+                        <div class="card-top">
+                            <span class="status-dot"></span>
+                            <span>AVAILABLE TO LEARN & BUILD</span>
+                        </div>
+
+                        <div class="developer-avatar">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <span class="developer-label">
+                            HELLO, WORLD!
+                        </span>
+
+                        <h2>
+                            AJAY<span>ONE.</span>
+                        </h2>
+
+                        <p>Dream. Code. Create.</p>
+
+                        <div class="card-divider"></div>
+
+                        <div class="developer-role">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            Aspiring Software Developer
+                        </div>
+
+                    </div>
+
+
+                    <!-- FLOATING TECHNOLOGIES -->
+
+                    <div class="tech-badge badge-html" data-depth="40">
+                        <i class="fa-brands fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+
+                    <div class="tech-badge badge-css" data-depth="55">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+
+                    <div class="tech-badge badge-js" data-depth="30">
+                        <i class="fa-brands fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="tech-badge badge-php" data-depth="50">
+                        <i class="fa-brands fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+
+                    <div class="tech-badge badge-python" data-depth="35">
+                        <i class="fa-brands fa-python"></i>
+                        <span>Python</span>
+                    </div>
+
+                    <div class="tech-badge badge-laravel" data-depth="45">
+                        <i class="fa-brands fa-laravel"></i>
+                        <span>Laravel</span>
+                    </div>
+
+                    <div class="tech-badge badge-mysql" data-depth="25">
+                        <i class="fa-solid fa-database"></i>
+                        <span>MySQL</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SCROLL INDICATOR -->
+
+            <div class="hero-bottom">
+
+                <span>SCROLL TO EXPLORE</span>
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             MY APPROACH
+        =============================== -->
+
+        <section class="approach-section">
+
+            <div class="section-heading">
 
                 <div class="eyebrow" data-reveal>
                     <span class="eyebrow-dot"></span>
-                    A LITTLE ABOUT ME
+                    WHAT DRIVES ME
                 </div>
 
-                <h1 data-reveal style="--d:.1s">
-                    Turning Ideas Into
-                    <span>Digital Reality.</span>
-                </h1>
-
-                <h2 data-reveal style="--d:.2s">
-                    Hey, I'm <span>Ajay Suresh.</span>
+                <h2 data-reveal style="--d:.1s">
+                    More Than Just <span>Writing Code.</span>
                 </h2>
 
-                <p class="about-intro" data-reveal style="--d:.3s">
-                    An MCA student, technology enthusiast and aspiring
-                    software developer who loves building things that
-                    make a difference.
+                <p data-reveal style="--d:.2s">
+                    I believe good development combines creativity,
+                    problem-solving and continuous learning.
                 </p>
-
-                <p class="about-description" data-reveal style="--d:.4s">
-                    My journey into technology is driven by curiosity
-                    and a passion for solving problems. I enjoy exploring
-                    how software works, developing web applications and
-                    creating clean, user-friendly digital experiences.
-                </p>
-
-                <p class="about-description" data-reveal style="--d:.45s">
-                    From frontend design to backend development, I love
-                    experimenting with different technologies and turning
-                    ideas into working projects. Every project is another
-                    opportunity to learn something new and improve my skills.
-                </p>
-
-                <p class="about-description" data-reveal style="--d:.5s">
-                    I'm always exploring new possibilities, strengthening
-                    my technical knowledge and working towards becoming
-                    a better developer.
-                </p>
-
-                <div class="about-actions" data-reveal style="--d:.6s">
-                    <a href="Assets/documents/resume.pdf" class="about-btn primary-btn" data-magnetic download>
-                        Download Resume <i class="fa-solid fa-download"></i>
-                    </a>
-                    <a href="projects.html" class="about-btn secondary-btn" data-magnetic>
-                        Explore My Work <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <div class="about-highlights" data-reveal style="--d:.7s">
-                    <div class="highlight">
-                        <span class="highlight-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-                        <div>
-                            <h3>Education</h3>
-                            <p>Master of Computer Applications</p>
-                        </div>
-                    </div>
-
-                    <div class="highlight">
-                        <span class="highlight-icon"><i class="fa-solid fa-code"></i></span>
-                        <div>
-                            <h3>Interests</h3>
-                            <p>Web Development & Software</p>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
-            <!-- RIGHT VISUAL -->
-            <div class="about-visual">
 
-                <div class="visual-glow"></div>
-                <div class="orbit orbit-one"></div>
-                <div class="orbit orbit-two"></div>
-                <div class="orbit orbit-three"></div>
+            <!-- APPROACH CARDS -->
 
-                <div class="developer-card">
-                    <div class="card-top">
-                        <span class="status-dot"></span>
-                        <span>AVAILABLE TO LEARN & BUILD</span>
+            <div class="approach-grid">
+
+
+                <article class="approach-card" data-reveal>
+
+                    <div class="approach-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
                     </div>
 
-                    <div class="developer-avatar"><i class="fa-solid fa-code"></i></div>
+                    <h3>Creative Thinking</h3>
 
-                    <span class="developer-label">HELLO, WORLD!</span>
-                    <h2>AJAY<span>ONE.</span></h2>
-                    <p>Dream. Code. Create.</p>
+                    <p>
+                        I enjoy exploring ideas and finding creative ways
+                        to turn concepts into practical digital solutions.
+                    </p>
 
-                    <div class="card-divider"></div>
+                    <span class="card-number">01</span>
 
-                    <div class="developer-role">
-                        <i class="fa-solid fa-laptop-code"></i>
-                        Aspiring Software Developer
+                </article>
+
+
+
+                <article class="approach-card" data-reveal style="--d:.15s">
+
+                    <div class="approach-icon">
+                        <i class="fa-solid fa-code"></i>
                     </div>
-                </div>
 
-                <!-- FLOATING TECHNOLOGIES -->
-                <div class="tech-badge badge-html" data-depth="40"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
-                <div class="tech-badge badge-css" data-depth="55"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
-                <div class="tech-badge badge-js" data-depth="30"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
-                <div class="tech-badge badge-php" data-depth="50"><i class="fa-brands fa-php"></i><span>PHP</span></div>
-                <div class="tech-badge badge-python" data-depth="35"><i class="fa-brands fa-python"></i><span>Python</span></div>
-                <div class="tech-badge badge-laravel" data-depth="45"><i class="fa-brands fa-laravel"></i><span>Laravel</span></div>
-                <div class="tech-badge badge-mysql" data-depth="25"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+                    <h3>Building Projects</h3>
+
+                    <p>
+                        I learn by building real applications, experimenting
+                        with technologies and improving through practice.
+                    </p>
+
+                    <span class="card-number">02</span>
+
+                </article>
+
+
+
+                <article class="approach-card" data-reveal style="--d:.3s">
+
+                    <div class="approach-icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+
+                    <h3>Continuous Growth</h3>
+
+                    <p>
+                        I believe every challenge is an opportunity to learn,
+                        develop new skills and become a better problem solver.
+                    </p>
+
+                    <span class="card-number">03</span>
+
+                </article>
+
 
             </div>
-        </div>
 
-        <div class="hero-bottom">
-            <span>SCROLL TO EXPLORE</span>
-            <i class="fa-solid fa-arrow-down"></i>
-        </div>
-    </section>
+        </section>
 
-    <!-- MY APPROACH -->
-    <section class="approach-section">
 
-        <div class="section-heading">
-            <div class="eyebrow" data-reveal>
-                <span class="eyebrow-dot"></span>
-                WHAT DRIVES ME
+
+        <!-- ==============================
+             CLOSING CTA
+        =============================== -->
+
+        <section class="about-cta" data-reveal>
+
+            <div class="cta-content">
+
+                <span class="cta-label">
+                    LET'S BUILD SOMETHING
+                </span>
+
+                <h2>
+                    Have an idea?
+                    <span>Let's make it happen.</span>
+                </h2>
+
+                <p>
+                    I'm always interested in learning, collaborating
+                    and exploring exciting development opportunities.
+                </p>
+
+                <a href="contact.html"
+                    class="about-btn primary-btn"
+                    data-magnetic>
+
+                    Get In Touch
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
             </div>
 
-            <h2 data-reveal style="--d:.1s">
-                More Than Just <span>Writing Code.</span>
-            </h2>
 
-            <p data-reveal style="--d:.2s">
-                I believe good development combines creativity,
-                problem-solving and continuous learning.
-            </p>
-        </div>
+            <div class="cta-decoration">
+                <i class="fa-solid fa-terminal"></i>
+            </div>
 
-        <div class="approach-grid">
+        </section>
 
-            <article class="approach-card" data-reveal>
-                <div class="approach-icon"><i class="fa-solid fa-lightbulb"></i></div>
-                <h3>Creative Thinking</h3>
-                <p>
-                    I enjoy exploring ideas and finding creative ways
-                    to turn concepts into practical digital solutions.
-                </p>
-                <span class="card-number">01</span>
-            </article>
+    </main>
 
-            <article class="approach-card" data-reveal style="--d:.15s">
-                <div class="approach-icon"><i class="fa-solid fa-code"></i></div>
-                <h3>Building Projects</h3>
-                <p>
-                    I learn by building real applications, experimenting
-                    with technologies and improving through practice.
-                </p>
-                <span class="card-number">02</span>
-            </article>
 
-            <article class="approach-card" data-reveal style="--d:.3s">
-                <div class="approach-icon"><i class="fa-solid fa-rocket"></i></div>
-                <h3>Continuous Growth</h3>
-                <p>
-                    I believe every challenge is an opportunity to learn,
-                    develop new skills and become a better problem solver.
-                </p>
-                <span class="card-number">03</span>
-            </article>
 
-        </div>
-    </section>
+    <!-- ==============================
+         COMMON FOOTER
+    =============================== -->
 
-    <!-- CLOSING CTA -->
-    <section class="about-cta" data-reveal>
+    <div id="footer-placeholder"></div>
 
-        <div class="cta-content">
-            <span class="cta-label">LET'S BUILD SOMETHING</span>
 
-            <h2>
-                Have an idea?
-                <span>Let's make it happen.</span>
-            </h2>
 
-            <p>
-                I'm always interested in learning, collaborating
-                and exploring exciting development opportunities.
-            </p>
+    <!-- ==============================
+         JAVASCRIPT
+    =============================== -->
 
-            <a href="contact.html" class="about-btn primary-btn" data-magnetic>
-                Get In Touch <i class="fa-solid fa-arrow-right"></i>
-            </a>
-        </div>
-
-        <div class="cta-decoration"><i class="fa-solid fa-terminal"></i></div>
-
-    </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="about-footer">
-    <a href="index.html" class="logo">Ajay<span>One.</span></a>
-    <p class="footer-tagline">DREAM <span>•</span> CODE <span>•</span> CREATE</p>
-    <p class="copyright">© 2026 AjayOne. All Rights Reserved.</p>
-</footer>
-
-<script src="Assets/js/about.js"></script>
-
+    <script src="Assets/js/components.js"></script>
+    <script src="Assets/js/about.js"></script>
+    <script src="Assets/js/script.js"></script>
 </body>
+
 </html>
