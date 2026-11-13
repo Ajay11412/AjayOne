@@ -142,3 +142,31 @@ if (fine && !reduce) {
     stage.addEventListener('mouseleave', () => card.style.transform = '');
 }
 
+if (menuBtn && navbar) {
+
+    menuBtn.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+
+        const icon = menuBtn.querySelector("i");
+
+        if (navbar.classList.contains("active")) {
+            icon.classList.replace("fa-bars", "fa-xmark");
+            menuBtn.setAttribute("aria-expanded", "true");
+        } else {
+            icon.classList.replace("fa-xmark", "fa-bars");
+            menuBtn.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    // Close menu after clicking a navigation link
+    navbar.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navbar.classList.remove("active");
+
+            const icon = menuBtn.querySelector("i");
+            icon.classList.replace("fa-xmark", "fa-bars");
+
+            menuBtn.setAttribute("aria-expanded", "false");
+        });
+    });
+}
