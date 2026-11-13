@@ -4,15 +4,7 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fine = matchMedia('(pointer: fine)').matches;
 
-/* Mobile menu */
-const nav = $('#navbar'), menuBtn = $('#menu-btn');
-if (nav && menuBtn) {
-    menuBtn.addEventListener('click', () => {
-        const open = nav.classList.toggle('show');
-        menuBtn.setAttribute('aria-expanded', open);
-    });
-    $$('a', nav).forEach(a => a.addEventListener('click', () => nav.classList.remove('show')));
-}
+
 
 /* Scroll progress + header state */
 const header = $('.header'), bar = $('.progress');
