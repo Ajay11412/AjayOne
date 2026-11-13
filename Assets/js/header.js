@@ -1,60 +1,49 @@
-/* ========================================
-   MOBILE HAMBURGER MENU
-======================================== */
 
-const menuBtn = $('#menu-btn');
-const navbar = $('#navbar');
+document.addEventListener("click", function (event) {
 
-if (menuBtn && navbar) {
+    const menuBtn = event.target.closest("#menu-btn");
+    const navbar = document.getElementById("navbar");
+    const button = document.getElementById("menu-btn");
 
-    const icon = menuBtn.querySelector('i');
+    if (!navbar || !button) return;
 
-    function closeMenu() {
-        navbar.classList.remove('show');
+    const icon = button.querySelector("i");
+
+    // Hamburger button click
+    if (menuBtn) {
+        const isOpen = navbar.classList.toggle("show");
 
         if (icon) {
-            icon.classList.remove('fa-xmark');
-            icon.classList.add('fa-bars');
+            icon.classList.toggle("fa-bars", !isOpen);
+            icon.classList.toggle("fa-xmark", isOpen);
         }
 
-        menuBtn.setAttribute('aria-expanded', 'false');
-        menuBtn.setAttribute('aria-label', 'Open navigation menu');
+        button.setAttribute("aria-expanded", String(isOpen));
+        return;
     }
 
-    menuBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-
-        const isOpen = navbar.classList.toggle('show');
+    // Navigation link click
+    if (event.target.closest("#navbar a")) {
+        navbar.classList.remove("show");
 
         if (icon) {
-            icon.classList.toggle('fa-bars', !isOpen);
-            icon.classList.toggle('fa-xmark', isOpen);
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
         }
 
-        menuBtn.setAttribute('aria-expanded', String(isOpen));
-        menuBtn.setAttribute(
-            'aria-label',
-            isOpen ? 'Close navigation menu' : 'Open navigation menu'
-        );
-    });
+        button.setAttribute("aria-expanded", "false");
+        return;
+    }
 
-    // Close menu after clicking a navigation link
-    $$('.navbar a', navbar).forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
+    // Click outside menu
+    if (!navbar.contains(event.target)) {
+        navbar.classList.remove("show");
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navbar.contains(e.target) && !menuBtn.contains(e.target)) {
-            closeMenu();
+        if (icon) {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
         }
-    });
 
-    // Close menu when switching to desktop
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            closeMenu();
-        }
-    });
-
-}
+        button.setAttribute("aria-expanded", "false");
+    }
+});
