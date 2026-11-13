@@ -597,6 +597,7 @@ a {
 }
 
 
+
 /* Hamburger Menu Button */
 .menu-btn {
     display: none;
@@ -605,7 +606,7 @@ a {
     color: #5145b8;
     font-size: 25px;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1002;
 }
 
 /* Mobile Responsive Navigation */
@@ -637,15 +638,19 @@ a {
 
         opacity: 0;
         visibility: hidden;
+        pointer-events: none;
+
         transform: translateY(-10px);
         transition: 0.3s ease;
 
-        z-index: 1000;
+        z-index: 1001;
     }
 
-    .navbar.active {
+    /* IMPORTANT: Must match JavaScript */
+    .navbar.show {
         opacity: 1;
         visibility: visible;
+        pointer-events: auto;
         transform: translateY(0);
     }
 
