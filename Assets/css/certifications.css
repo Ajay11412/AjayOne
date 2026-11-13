@@ -1,0 +1,363 @@
+/* =====================================
+   AJAYONE - CERTIFICATES PAGE (light design)
+===================================== */
+
+:root {
+    --bg: #f2f2f2;
+    --panel: #f7f7f7;
+    --surface: #ffffff;
+    --text: #111111;
+    --muted: #6b6b6b;
+    --dark: #1a1a1a;
+    --border: #ececec;
+
+    --lavender: #8f84f0;
+    --lavender-deep: #6f63ec;
+    --lavender-soft: #cfc9fb;
+    --lavender-tint: #f1effe;
+    --teal: #0f9aae;
+    --teal-soft: #dff3f5;
+
+    --radius-lg: 28px;
+    --radius-md: 20px;
+    --shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.1);
+    --shadow-btn: 0 6px 14px rgba(0, 0, 0, 0.22);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header - floating white bar */
+.header {
+    width: calc(100% - 4%);
+    margin: 15px auto 0;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 15px;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--lavender);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--text);
+}
+
+/* Black pill button */
+.talk-btn {
+    background: var(--dark);
+    color: #fff;
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: var(--shadow-btn);
+    transition: 0.3s;
+}
+
+.talk-btn:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+/* Certificates Section */
+.certificates-section {
+    padding: 85px 8%;
+    min-height: 85vh;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+/* Subtitle = teal pill badge */
+.subtitle {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--teal-soft);
+    color: var(--teal);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.section-heading h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    margin: 22px 0 16px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.section-heading h1 span {
+    background: linear-gradient(90deg, #6f63ec, #b3a9f8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Certificate Grid */
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Certificate Card */
+.certificate-card {
+    padding: 12px;
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: 0.35s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Certificate Image */
+.certificate-image {
+    height: 210px;
+    background: linear-gradient(135deg, #f1effe, #e4e0fd);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.4s;
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.04);
+}
+
+.certificate-icon {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+    background: var(--dark);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: var(--shadow-btn);
+}
+
+/* Certificate Information */
+.certificate-info {
+    padding: 22px 16px 14px;
+}
+
+.category {
+    display: inline-block;
+    background: var(--teal-soft);
+    color: var(--teal);
+    padding: 6px 13px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.certificate-info h3 {
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin: 15px 0 10px;
+}
+
+.certificate-info p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.certificate-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin: 20px 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.certificate-meta i {
+    color: var(--lavender-deep);
+    margin-right: 7px;
+}
+
+/* View Button */
+.view-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    color: var(--lavender-deep);
+}
+
+/* Bottom Message */
+.more-certificates {
+    text-align: center;
+    margin-top: 55px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.more-certificates i {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin: 15px auto 0;
+    font-size: 20px;
+    color: var(--lavender-deep);
+    background: var(--surface);
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+}
+
+/* Footer - floating white bar */
+.footer {
+    margin: 0 2% 15px;
+    padding: 22px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.footer a {
+    color: var(--lavender-deep);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+    .navbar {
+        gap: 14px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .certificate-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 18px 20px;
+    }
+
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .talk-btn {
+        display: none;
+    }
+
+    .section-heading h1 {
+        font-size: 36px;
+    }
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificates-section {
+        padding: 55px 4%;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        padding: 22px 6%;
+    }
+}

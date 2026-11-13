@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjayOne | Developer Portfolio</title>
+    <meta name="description" content="AjayOne - Personal developer portfolio showcasing skills, projects and creativity.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="Assets/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+    <!-- Effects -->
+    <div class="progress"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="blob blob-a" data-depth="60"></div>
+    <div class="blob blob-b" data-depth="40"></div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <a href="#" class="logo">Ajay<span>One.</span></a>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="educations.html">Education</a>
+            <a href="certifications.html">Certifications</a>
+        </nav>
+
+        <a href="contact.html" class="nav-btn" data-magnetic>Let's Talk <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+        <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <p class="welcome" data-reveal>
+                <span></span> WELCOME TO MY DIGITAL SPACE
+            </p>
+
+            <h1>
+                <b class="line" style="--i:0"><b>Building Digital</b></b>
+                <b class="line" style="--i:1"><b>Experiences That</b></b>
+                <b class="line" style="--i:2"><b><span>Matter.</span></b></b>
+            </h1>
+
+            <p class="typed-line" data-reveal style="--d:.5s">
+                I'm a <span id="typed"></span><i class="caret"></i>
+            </p>
+
+            <p class="description" data-reveal style="--d:.6s">
+                Hello! I'm Ajay, a passionate developer who loves
+                transforming ideas into beautiful and functional
+                digital experiences.
+            </p>
+
+            <div class="home-buttons" data-reveal style="--d:.7s">
+                <a href="projects.html" class="btn primary-btn" data-magnetic>
+                    Explore My Work <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="Assets/documents/Resume.pdf" class="btn secondary-btn" data-magnetic download>
+                    Download CV <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+
+            <div class="social-links" data-reveal style="--d:.8s">
+                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <!-- Edit these numbers -->
+            <div class="stats" data-reveal style="--d:.9s">
+                <div><strong data-count="4" data-suffix="+">0</strong><span>Projects</span></div>
+                <div><strong data-count="8" data-suffix="+">0</strong><span>Technologies</span></div>
+                <div><strong data-count="2" data-suffix="+">0</strong><span>Years Learning</span></div>
+            </div>
+
+        </div>
+
+        <!-- Profile Image -->
+        <div class="home-image" data-reveal style="--d:.4s">
+
+            <div class="image-glow"></div>
+
+            <div class="profile-card">
+                <img src="Assets/images/profile.jpg" alt="Ajay profile">
+            </div>
+
+            <div class="chip chip-1" data-depth="40"><i class="fa-brands fa-html5"></i></div>
+            <div class="chip chip-2" data-depth="55"><i class="fa-brands fa-js"></i></div>
+            <div class="chip chip-3" data-depth="30"><i class="fa-brands fa-php"></i></div>
+
+            <div class="floating-card" data-depth="25">
+                <i class="fa-solid fa-code"></i>
+                <div>
+                    <h4>Developer</h4>
+                    <p>Turning ideas into reality</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Tech ticker -->
+    <section class="marquee" data-reveal>
+        <div class="track">
+            <span><i class="fa-brands fa-html5"></i> HTML</span>
+            <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span><i class="fa-brands fa-php"></i> PHP</span>
+            <span><i class="fa-brands fa-laravel"></i> Laravel</span>
+            <span><i class="fa-brands fa-python"></i> Python</span>
+            <span><i class="fa-solid fa-database"></i> MySQL</span>
+            <span><i class="fa-brands fa-git-alt"></i> Git</span>
+        </div>
+    </section>
+
+    <script src="Assets/js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | AjayOne</title>
+    <meta name="description" content="Explore web development projects and applications.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="Assets/css/project.css">
+    <link rel="stylesheet" href="Assets/css/animations.css">
+    <link rel="stylesheet" href="Assets/css/project-animations.css">
+</head>
+
+<body>
+
+    <!-- Effects -->
+    <div class="progress"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="blob blob-a" data-depth="60"></div>
+    <div class="blob blob-b" data-depth="40"></div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <a href="index.html" class="logo">Ajay<span>One.</span></a>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="educations.html">Education</a>
+            <a href="certifications.html">Certifications</a>
+        </nav>
+
+        <a href="contact.html" class="nav-btn" data-magnetic>Let's Talk <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+        <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="projects-hero">
+            <div class="hero-glow glow-one" data-depth="50"></div>
+            <div class="hero-glow glow-two" data-depth="35"></div>
+
+            <div class="projects-hero-content">
+                <span class="section-tag" data-reveal>
+                    <i class="fas fa-code"></i> MY WORK
+                </span>
+
+                <h1 data-reveal style="--d:.1s">Turning Ideas Into <span>Digital Reality.</span></h1>
+
+                <p data-reveal style="--d:.2s">
+                    A collection of projects where I explore technologies,
+                    solve problems and turn ideas into useful applications.
+                </p>
+
+                <div data-reveal style="--d:.3s">
+                    <a href="#project-list" class="primary-btn" data-magnetic>
+                        Explore Projects <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-decoration" data-reveal style="--d:.3s">
+                <div class="code-window">
+                    <div class="window-top">
+                        <span></span><span></span><span></span>
+                        <small>developer.js</small>
+                    </div>
+                    <div class="code-content">
+                        <p><span class="code-purple">const</span> developer = {</p>
+                        <p>&nbsp;&nbsp;name: <span class="code-green">"Ajay"</span>,</p>
+                        <p>&nbsp;&nbsp;passion: <span class="code-green">"Development"</span>,</p>
+                        <p>&nbsp;&nbsp;ideas: <span class="code-blue">Infinity</span></p>
+                        <p>};</p>
+                        <p class="code-comment">// Building something meaningful...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="project-section" id="project-list">
+
+            <div class="section-heading">
+                <span class="section-tag" data-reveal>PORTFOLIO</span>
+                <h2 data-reveal style="--d:.1s">Featured <span>Projects</span></h2>
+                <p data-reveal style="--d:.2s">Some of the applications and ideas I've been working on.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- EventPro -->
+                <article class="project-card" data-reveal>
+                    <div class="project-visual eventpro-visual">
+                        <div class="visual-icon"><i class="fas fa-calendar-check"></i></div>
+                        <span class="visual-label">EVENT MANAGEMENT</span>
+                        <div class="visual-decoration"><i class="fas fa-ticket-alt"></i></div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-category">Web Application</span>
+                            <span class="project-number">01</span>
+                        </div>
+
+                        <h3>EventPro</h3>
+
+                        <p>
+                            A smart event management system designed to help
+                            organizers manage events, registrations, ticketing
+                            and attendance through a centralized platform.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>Laravel</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="Add EventPro GitHub link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="project-link project-demo" aria-label="Add EventPro live demo link">
+                                Live Demo <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Mivo -->
+                <article class="project-card" data-reveal style="--d:.12s">
+                    <div class="project-visual mivo-visual">
+                        <div class="visual-icon"><i class="fas fa-file-arrow-right"></i></div>
+                        <span class="visual-label">FILE CONVERTER</span>
+                        <div class="visual-decoration"><i class="fas fa-file-pdf"></i></div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-category">Web Tool</span>
+                            <span class="project-number">02</span>
+                        </div>
+
+                        <h3>Mivo</h3>
+
+                        <p>
+                            An all-in-one file converter website concept focused
+                            on making common file conversion tasks simple,
+                            accessible and easy to use.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="Add Mivo GitHub link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="project-link project-demo" aria-label="Add Mivo live demo link">
+                                Live Demo <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- AjayOne -->
+                <article class="project-card" data-reveal>
+                    <div class="project-visual portfolio-visual">
+                        <div class="visual-icon"><i class="fas fa-laptop-code"></i></div>
+                        <span class="visual-label">PERSONAL PORTFOLIO</span>
+                        <div class="visual-decoration"><i class="fas fa-user-astronaut"></i></div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-category">Personal Website</span>
+                            <span class="project-number">03</span>
+                        </div>
+
+                        <h3>AjayOne</h3>
+
+                        <p>
+                            My personal developer portfolio, created to present
+                            my skills, education, projects and journey in
+                            software development.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Font Awesome</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="Add portfolio GitHub link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="index.html" class="project-link project-demo">
+                                View Website <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Lakeboat (now inside the grid, so it matches the other cards) -->
+                <article class="project-card" data-reveal style="--d:.12s">
+                    <div class="project-visual lakeboat-visual">
+                        <div class="visual-icon"><i class="fas fa-ship"></i></div>
+                        <span class="visual-label">BOAT BOOKING PLATFORM</span>
+                        <div class="visual-decoration"><i class="fas fa-water"></i></div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-category">Web Application</span>
+                            <span class="project-number">04</span>
+                        </div>
+
+                        <h3>Lakeboat</h3>
+
+                        <p>
+                            A boat booking platform designed to help users explore
+                            lake destinations, discover boat services and enjoy
+                            a simple and convenient booking experience.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="Lakeboat GitHub link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="project-link project-demo" aria-label="Lakeboat live demo link">
+                                Live Demo <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Closing Section -->
+        <section class="project-cta" data-reveal>
+            <div class="cta-icon"><i class="fas fa-lightbulb"></i></div>
+
+            <h2>Have an idea in mind?</h2>
+            <p>
+                I'm always interested in learning new technologies
+                and building useful digital experiences.
+            </p>
+
+            <a href="contact.html" class="primary-btn" data-magnetic>
+                Get In Touch <i class="fas fa-arrow-right"></i>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="projects-footer">
+        <p>© <span id="current-year"></span> AjayOne. Built with passion and code.</p>
+    </footer>
+
+    <script src="Assets/js/project.js"></script>
+    <script>
+        const yearElement = document.getElementById("current-year");
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    </script>
+
+</body>
+</html>

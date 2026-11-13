@@ -1,0 +1,1017 @@
+/* =====================================
+   AJAYONE - EDUCATION PAGE (light design)
+===================================== */
+
+:root {
+    --bg: #f2f2f2;
+    --panel: #f7f7f7;
+    --surface: #ffffff;
+    --text: #111111;
+    --muted: #6b6b6b;
+    --dark: #1a1a1a;
+    --border: #ececec;
+
+    --lavender: #8f84f0;
+    --lavender-deep: #6f63ec;
+    --lavender-soft: #cfc9fb;
+    --lavender-tint: #f1effe;
+    --teal: #0f9aae;
+    --teal-soft: #dff3f5;
+    --green: #1f9d55;
+
+    --radius-lg: 28px;
+    --radius-md: 20px;
+    --shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.1);
+    --shadow-btn: 0 6px 14px rgba(0, 0, 0, 0.22);
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.education-hero {
+    min-height: 590px;
+    margin: 20px 2% 0;
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(circle at 85% 45%, rgba(143,132,240,.25), transparent 40%),
+        var(--panel);
+}
+
+/* HERO CONTENT */
+
+.education-hero-content {
+    position: relative;
+    z-index: 2;
+    animation: educationReveal 1s ease both;
+}
+
+/* Eyebrow = teal pill badge */
+.education-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 26px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--teal-soft);
+    color: var(--teal);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.education-eyebrow > span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--teal);
+}
+
+.education-hero-content h1 {
+    max-width: 650px;
+    color: var(--text);
+    font-size: clamp(48px, 6.5vw, 86px);
+    font-weight: 500;
+    line-height: .98;
+    letter-spacing: -0.045em;
+}
+
+.education-hero-content h1 span {
+    display: block;
+    background: linear-gradient(110deg, var(--lavender-deep), #b3a9f8);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.education-hero-content > p {
+    max-width: 480px;
+    margin: 26px 0 32px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* BUTTON - black pill */
+
+.education-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 25px;
+    border-radius: 999px;
+    color: #fff;
+    background: var(--dark);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: var(--shadow-btn);
+    transition: .3s ease;
+}
+
+.education-btn:hover {
+    transform: translateY(-3px);
+    background: #000;
+}
+
+/* =====================================
+   HERO VISUAL
+===================================== */
+
+.education-visual {
+    min-height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.education-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: var(--lavender);
+    opacity: .35;
+    filter: blur(90px);
+}
+
+.education-orbit {
+    position: absolute;
+    border: 1px solid rgba(143,132,240,.3);
+    border-radius: 50%;
+}
+
+.orbit-one {
+    width: 350px;
+    height: 350px;
+    animation: educationOrbit 25s linear infinite;
+}
+
+.orbit-two {
+    width: 460px;
+    height: 460px;
+    border-style: dashed;
+    opacity: .6;
+    animation: educationOrbit 35s linear infinite reverse;
+}
+
+.education-main-card {
+    position: relative;
+    z-index: 2;
+    width: 330px;
+    padding: 38px 25px;
+    text-align: center;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    box-shadow: 0 20px 50px rgba(60, 50, 140, .15);
+    transition: .4s ease;
+}
+
+.education-main-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 26px 60px rgba(60, 50, 140, .22);
+}
+
+.education-card-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 25px;
+    display: grid;
+    place-items: center;
+    border-radius: 26px;
+    color: #fff;
+    font-size: 39px;
+    background: linear-gradient(135deg, #8f84f0, #b3a9f8);
+    box-shadow: 0 12px 30px rgba(143,132,240,.4);
+}
+
+.education-card-label {
+    color: var(--teal);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .1em;
+}
+
+.education-main-card h2 {
+    color: var(--text);
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin-top: 14px;
+}
+
+.education-main-card h3 {
+    color: var(--lavender-deep);
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.education-card-divider {
+    height: 1px;
+    margin: 25px 0;
+    background: var(--border);
+}
+
+.education-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.education-card-footer i {
+    color: var(--lavender-deep);
+}
+
+/* FLOATING ICONS */
+
+.education-floating {
+    position: absolute;
+    z-index: 3;
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: var(--surface);
+    color: var(--lavender-deep);
+    font-size: 21px;
+    box-shadow: var(--shadow-hover);
+    animation: educationFloat 4s ease-in-out infinite;
+}
+
+.floating-book {
+    top: 8%;
+    left: 3%;
+}
+
+.floating-award {
+    top: 15%;
+    right: 0;
+    animation-delay: 1s;
+}
+
+.floating-light {
+    bottom: 8%;
+    left: 12%;
+    animation-delay: 2s;
+}
+
+/* =====================================
+   SECTION HEADING
+===================================== */
+
+.academic-section,
+.study-section {
+    padding: 100px 8%;
+    background: var(--bg);
+}
+
+.education-section-heading {
+    max-width: 700px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.education-section-heading .education-eyebrow {
+    justify-content: center;
+}
+
+.education-section-heading h2 {
+    color: var(--text);
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    margin-bottom: 16px;
+}
+
+.education-section-heading h2 span {
+    color: var(--lavender-deep);
+}
+
+.education-section-heading > p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* =====================================
+   ACADEMIC TIMELINE
+===================================== */
+
+.academic-timeline {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+.academic-timeline::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    bottom: 70px;
+    left: 27px;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        var(--lavender),
+        rgba(143,132,240,.3),
+        transparent
+    );
+}
+
+.timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 25px;
+    margin-bottom: 28px;
+}
+
+.timeline-marker {
+    position: relative;
+    z-index: 2;
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    border-radius: 18px;
+    color: var(--lavender-deep);
+    background: var(--surface);
+    font-size: 20px;
+    box-shadow: var(--shadow);
+}
+
+.timeline-card {
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    transition: .35s ease;
+}
+
+.timeline-card:hover {
+    transform: translateX(7px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Current education = lavender highlight */
+.current-education {
+    background: linear-gradient(135deg, #8f84f0 0%, #b3a9f8 60%, #cfc9fb 100%);
+    color: #fff;
+}
+
+.current-education h3,
+.current-education h4,
+.current-education h4 i,
+.current-education .timeline-date,
+.current-education > p {
+    color: #fff;
+}
+
+.current-education > p {
+    opacity: .92;
+}
+
+.current-education .timeline-number {
+    color: rgba(255,255,255,.35);
+}
+
+.current-education .education-status {
+    background: rgba(255,255,255,.25);
+    color: #fff;
+}
+
+.current-education .education-status > span {
+    background: #fff;
+}
+
+.current-education .education-tags span {
+    background: rgba(255,255,255,.25);
+    color: #fff;
+}
+
+.timeline-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.education-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    color: var(--green);
+    background: rgba(31,157,85,.1);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .08em;
+}
+
+.education-status > span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+.pending-status {
+    color: var(--lavender-deep);
+    background: var(--lavender-tint);
+}
+
+.timeline-number {
+    color: #d4d4d4;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.timeline-date {
+    color: var(--teal);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .08em;
+}
+
+.timeline-card h3 {
+    margin: 12px 0;
+    color: var(--text);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+}
+
+.timeline-card h4 {
+    margin-bottom: 17px;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.timeline-card h4 i {
+    margin-right: 7px;
+    color: var(--lavender-deep);
+}
+
+.timeline-card > p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.education-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.education-tags span {
+    padding: 7px 13px;
+    border-radius: 999px;
+    background: var(--lavender-tint);
+    color: var(--lavender-deep);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* =====================================
+   AREAS OF STUDY
+===================================== */
+
+.study-section {
+    background: var(--bg);
+    padding-top: 40px;
+}
+
+.study-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.study-card {
+    min-height: 220px;
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    transition: .35s ease;
+}
+
+.study-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.study-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    color: var(--lavender-deep);
+    background: var(--lavender-tint);
+    font-size: 21px;
+}
+
+.study-card h3 {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+}
+
+.study-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =====================================
+   LEARNING PHILOSOPHY (teal card)
+===================================== */
+
+.education-philosophy {
+    max-width: 1200px;
+    min-height: 290px;
+    margin: 70px auto 100px;
+    padding: 55px 7%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, #0f9aae 0%, #38b6c6 100%);
+    color: #fff;
+}
+
+.philosophy-icon {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    color: #fff;
+    background: rgba(255,255,255,.22);
+    font-size: 29px;
+}
+
+.philosophy-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+}
+
+.philosophy-content > span {
+    color: rgba(255,255,255,.85);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+}
+
+.philosophy-content h2 {
+    margin: 13px 0;
+    color: #fff;
+    font-size: clamp(26px, 3.2vw, 40px);
+    font-weight: 500;
+    letter-spacing: -0.035em;
+}
+
+.philosophy-content h2 span {
+    color: #1a1a1a;
+}
+
+.philosophy-content p {
+    color: rgba(255,255,255,.9);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.philosophy-decoration {
+    position: absolute;
+    right: 8%;
+    color: rgba(255,255,255,.15);
+    font-size: 160px;
+}
+
+/* =====================================
+   CTA
+===================================== */
+
+.education-cta {
+    margin: 0 2%;
+    padding: 90px 8%;
+    text-align: center;
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(ellipse at center, rgba(143,132,240,.22), transparent 65%),
+        var(--panel);
+}
+
+.education-cta > span {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--teal-soft);
+    color: var(--teal);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.education-cta h2 {
+    max-width: 750px;
+    margin: 24px auto 16px;
+    color: var(--text);
+    font-size: clamp(34px, 5vw, 64px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+.education-cta h2 span {
+    color: var(--lavender-deep);
+}
+
+.education-cta > p {
+    margin-bottom: 30px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.education-footer {
+    margin: 20px 2% 15px;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.education-footer .logo {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.education-footer .logo span {
+    color: var(--lavender);
+}
+
+.education-footer > p {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.education-footer > p span {
+    color: var(--lavender-deep);
+}
+
+.education-footer .copyright {
+    color: #9a9a9a;
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes educationFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+}
+
+@keyframes educationOrbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes educationReveal {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1000px) {
+
+    .education-hero {
+        padding-left: 6%;
+        padding-right: 6%;
+        gap: 20px;
+    }
+
+    .education-hero-content h1 {
+        font-size: 58px;
+    }
+
+    .education-visual {
+        transform: scale(.85);
+    }
+
+    .academic-section,
+    .study-section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .study-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .education-philosophy {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .education-hero {
+        grid-template-columns: 1fr;
+        padding: 65px 6% 45px;
+        gap: 10px;
+    }
+
+    .education-hero-content h1 {
+        font-size: clamp(44px, 11vw, 62px);
+    }
+
+    .education-hero-content > p {
+        font-size: 14px;
+    }
+
+    .education-visual {
+        min-height: 390px;
+        transform: scale(.85);
+        margin: -10px -25px;
+    }
+
+    .orbit-one { width: 290px; height: 290px; }
+    .orbit-two { width: 380px; height: 380px; }
+
+    .academic-section,
+    .study-section {
+        padding: 70px 4%;
+    }
+
+    .education-section-heading {
+        margin-bottom: 45px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 43px 1fr;
+        gap: 13px;
+    }
+
+    .academic-timeline::before {
+        left: 21px;
+    }
+
+    .timeline-marker {
+        width: 43px;
+        height: 43px;
+        border-radius: 14px;
+        font-size: 16px;
+    }
+
+    .timeline-card {
+        padding: 22px 17px;
+    }
+
+    .timeline-card h3 { font-size: 19px; }
+    .timeline-card h4 { font-size: 12px; }
+    .timeline-card > p { font-size: 13px; }
+    .timeline-number { font-size: 24px; }
+
+    .study-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .study-card {
+        min-height: 210px;
+        padding: 20px 15px;
+    }
+
+    .study-card h3 { font-size: 16px; }
+    .study-card p { font-size: 12px; }
+
+    .education-philosophy {
+        margin: 50px 2%;
+        padding: 40px 6%;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .philosophy-decoration {
+        font-size: 100px;
+        right: 5%;
+        bottom: 5%;
+    }
+
+    .education-cta {
+        padding: 70px 6%;
+    }
+
+    .education-footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 6%;
+    }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 400px) {
+
+    .education-hero-content h1 {
+        font-size: 42px;
+    }
+
+    .education-main-card {
+        width: 290px;
+        padding: 30px 18px;
+    }
+
+    .timeline-item {
+        gap: 9px;
+        grid-template-columns: 37px 1fr;
+    }
+
+    .academic-timeline::before {
+        left: 18px;
+    }
+
+    .timeline-marker {
+        width: 37px;
+        height: 37px;
+        font-size: 14px;
+    }
+
+    .timeline-card {
+        padding: 18px 13px;
+    }
+
+    .timeline-card h3 { font-size: 17px; }
+    .education-status { font-size: 8px; }
+
+    .study-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+/* education-animations.css - load AFTER animations.css (education page only) */
+
+/* Hero spotlight */
+.education-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(480px circle at var(--mx, 70%) var(--my, 40%), rgba(143, 132, 240, 0.3), transparent 60%);
+    pointer-events: none;
+}
+.education-hero-content { z-index: 2; }
+
+/* Animated gradient words */
+.education-hero-content h1 span,
+.education-section-heading h2 span,
+.education-cta h2 span {
+    background: linear-gradient(90deg, #6f63ec, #b3a9f8, #38bdf8, #6f63ec);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 6s linear infinite;
+}
+
+.education-eyebrow > span { animation: pulse 2s infinite; }
+.education-glow { animation: glow 5s ease-in-out infinite alternate; }
+.education-card-icon { animation: bob 4s ease-in-out infinite; }
+.philosophy-decoration { animation: bob 7s ease-in-out infinite; }
+
+/* 3D tilt + glare on main card */
+.education-visual { perspective: 900px; }
+.education-main-card { transform-style: preserve-3d; transition: transform 0.2s ease-out, box-shadow 0.4s; }
+.education-main-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at var(--gx, 50%) var(--gy, 0%), rgba(255, 255, 255, 0.5), transparent 55%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+.education-visual:hover .education-main-card::after { opacity: 1; }
+
+.education-btn { position: relative; overflow: hidden; }
+
+/* Timeline: line draws as you scroll, markers pop, current item pulses */
+@supports (animation-timeline: view()) {
+    .academic-timeline::before {
+        transform-origin: top;
+        animation: grow linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 60%;
+    }
+}
+@keyframes grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes ring {
+    0% { box-shadow: 0 0 0 0 rgba(143, 132, 240, 0.55); }
+    100% { box-shadow: 0 0 0 16px rgba(143, 132, 240, 0); }
+}
+
+.timeline-marker { transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s, color 0.3s; }
+.timeline-item:first-child .timeline-marker { animation: ring 2s infinite; }
+.timeline-item:hover .timeline-marker { transform: scale(1.12) rotate(-6deg); background: var(--dark, #1a1a1a); color: #fff; }
+
+/* Card spotlight (timeline + study cards) */
+.timeline-card, .study-card { position: relative; }
+.timeline-card::before,
+.study-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(260px circle at var(--cx, 50%) var(--cy, 0), rgba(143, 132, 240, 0.18), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+.timeline-card:hover::before,
+.study-card:hover::before { opacity: 1; }
+
+/* Study cards: icon pop */
+.study-icon { transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s, color 0.3s; }
+.study-card:hover .study-icon { transform: rotate(-8deg) scale(1.12); background: var(--lavender, #8f84f0); color: #fff; }
+
+/* Tags */
+.education-tags span { transition: 0.25s; }
+.education-tags span:hover { transform: translateY(-3px); background: var(--dark, #1a1a1a); color: #fff; }

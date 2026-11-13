@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | AjayOne</title>
+    <meta name="description" content="Contact Ajay through GitHub, LinkedIn or email.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="Assets/css/contact.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+    <header class="header">
+
+        <a href="#" class="logo">Ajay<span>One.</span></a>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html" >Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="educations.html">Education</a>
+            <a href="certifications.html">Certifications</a>
+        </nav>
+
+        <a href="contact.html" class="nav-btn">Let's Talk <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+        <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </header>
+
+<main>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="contact-glow"></div>
+
+        <div class="contact-hero-content">
+            <span class="section-tag">
+                <i class="fas fa-paper-plane"></i> GET IN TOUCH
+            </span>
+
+            <h1>Let's Start a <span>Conversation.</span></h1>
+
+            <p>
+                Have a project idea, collaboration opportunity or just
+                want to connect? Feel free to reach out.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+
+        <div class="contact-heading">
+            <h2>Connect <span>With Me</span></h2>
+            <p>Choose your preferred way to get in touch.</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <!-- GitHub -->
+            <a class="contact-card github-card"
+               href="https://github.com/YOUR_USERNAME"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="contact-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+
+                <h3>GitHub</h3>
+
+                <p>
+                    Explore my repositories, source code
+                    and development projects.
+                </p>
+
+                <span class="contact-action">
+                    Visit GitHub <i class="fas fa-arrow-up-right-from-square"></i>
+                </span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a class="contact-card linkedin-card"
+               href="https://www.linkedin.com/in/ajay-suresh-24b0a02b2/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="contact-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+
+                <h3>LinkedIn</h3>
+
+                <p>
+                    Connect with me professionally and
+                    explore career opportunities.
+                </p>
+
+                <span class="contact-action">
+                    Connect on LinkedIn
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                </span>
+            </a>
+
+            <!-- Email -->
+            <a class="contact-card email-card"
+               href="mailto:ajaysuresh396@gmail.com">
+
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+
+                <h3>Email</h3>
+
+                <p>
+                    Send me a message for questions,
+                    discussions or collaborations.
+                </p>
+
+                <span class="contact-action">
+                    Send an Email <i class="fas fa-arrow-right"></i>
+                </span>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Message Form -->
+    <section class="message-section">
+
+        <div class="message-info">
+            <span class="section-tag">SAY HELLO</span>
+
+            <h2>Send Me a <span>Message.</span></h2>
+
+            <p>
+                Have something in mind? Write a message using
+                the form. It will open your default email application
+                with your message prepared.
+            </p>
+
+            <div class="message-note">
+                <i class="fas fa-clock"></i>
+                <span>I'll get back to you when I can.</span>
+            </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sender-email">Your Email</label>
+                <input type="email" id="sender-email" name="email"
+                       placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject"
+                       placeholder="What is this about?" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5"
+                          placeholder="Write your message here..."
+                          required></textarea>
+            </div>
+
+            <button type="submit" class="send-btn">
+                Prepare Email <i class="fas fa-paper-plane"></i>
+            </button>
+
+            <p class="form-hint" id="form-hint" aria-live="polite">
+                Your email application will open to send the message.
+            </p>
+
+        </form>
+    </section>
+
+</main>
+
+<footer class="contact-footer">
+    <p>
+        © <span id="current-year"></span> AjayOne.
+        Designed and developed with passion.
+    </p>
+</footer>
+
+<script src="Assets/js/contact.js"></script>
+
+
+</body>
+</html>
