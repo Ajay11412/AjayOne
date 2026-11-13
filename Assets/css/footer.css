@@ -1,0 +1,99 @@
+
+/* ==============================
+   AJAYONE COMMON FOOTER
+============================== */
+
+.ajay-footer {
+    width: 100%;
+    margin: 0;
+    padding: 45px 8% 20px;
+    background: #10101b;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.ajay-footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.ajay-footer-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.ajay-footer-logo span {
+    color: #8275e8;
+}
+
+.ajay-footer-tagline {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #b4b3c5;
+}
+
+.ajay-footer-tagline span {
+    color: #8275e8;
+}
+
+.ajay-footer-social {
+    display: flex;
+    gap: 15px;
+    margin: 8px 0;
+}
+
+.ajay-footer-social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.ajay-footer-social a:hover {
+    background: #8275e8;
+    border-color: #8275e8;
+    transform: translateY(-4px);
+}
+
+.ajay-footer-bottom {
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.ajay-footer-bottom p {
+    margin: 0;
+    color: #9291a5;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    .ajay-footer {
+        padding: 35px 5% 18px;
+    }
+
+    .ajay-footer-logo {
+        font-size: 24px;
+    }
+
+    .ajay-footer-tagline {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+}
