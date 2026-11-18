@@ -726,3 +726,62 @@ body {
 .tech-stack span:hover { background: var(--project-dark, #1a1a1a); color: #fff; transform: translateY(-3px); }
 .project-number { transition: color 0.3s; }
 .project-card:hover .project-number { color: var(--project-purple, #6f63ec); }
+/* =================================
+   HEART DISEASE PREDICTION PROJECT
+================================= */
+
+.heart-visual {
+    background: linear-gradient(135deg, #7f1d3f, #e11d48, #fb7185);
+    position: relative;
+    overflow: hidden;
+}
+
+.heart-visual .visual-icon {
+    color: #ffffff;
+}
+
+.heart-visual .visual-label {
+    color: #ffffff;
+}
+
+.heart-visual .visual-decoration {
+    color: rgba(255, 255, 255, 0.18);
+}
+
+
+/* =================================
+   WAYANAD GUIDE PROJECT
+================================= */
+
+.wayanad-visual {
+    background: linear-gradient(135deg, #064e3b, #059669, #84cc16);
+    position: relative;
+    overflow: hidden;
+}
+
+.wayanad-visual .visual-icon {
+    color: #ffffff;
+}
+
+.wayanad-visual .visual-label {
+    color: #ffffff;
+}
+
+.wayanad-visual .visual-decoration {
+    color: rgba(255, 255, 255, 0.18);
+}
+
+
+/* =================================
+   PROJECT VISUAL HOVER EFFECTS
+================================= */
+
+.heart-visual,
+.wayanad-visual {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.project-card:hover .heart-visual,
+.project-card:hover .wayanad-visual {
+    filter: brightness(1.08);
+}
